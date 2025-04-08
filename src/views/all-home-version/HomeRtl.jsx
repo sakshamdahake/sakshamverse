@@ -21,7 +21,7 @@ const HomeRtl = () => {
   document.querySelector("body").classList.add("rtl");
 
   return (
-    <div className="yellow">
+    <div className="blue-teal">
       <SwitchDark />
       {/* End Switcher */}
 

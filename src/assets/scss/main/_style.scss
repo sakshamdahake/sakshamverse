@@ -47,8 +47,24 @@ html {
   overflow-x: hidden;
   height: 100%;
 }
+
+::-moz-selection {
+  background-color: var(--main-secondary-color);
+  color: #ffffff;
+}
+::selection {
+  background-color: var(--main-secondary-color);
+  color: #ffffff;
+}
+
 :root {
-  --main-primary-color: #ffb400;
+  --main-primary-color: #12263A;
+  --main-secondary-color: #06BCC1;
+  --main-light-color: #F4EDEA;
+  --main-accent-color: #F4D1AE;
+  --main-neutral-color: #C5D8D1;
+  --dark-text-primary: #F4EDEA;
+  --dark-text-secondary: #F4D1AE;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -119,6 +135,11 @@ body.light .button:hover .button-text {
   color: #fff;
 }
 
+body.light .button:hover {
+  background-color: var(--main-secondary-color);
+  border-color: var(--main-secondary-color);
+}
+
 body.light .home .home-details h6 {
   color: #777;
 }
@@ -148,7 +169,7 @@ body.light .title-bg {
 }
 
 body.light .about .box-stats {
-  border: 1px solid #ddd;
+  border: 1px solid var(--main-neutral-color);
 }
 
 body.light .about .c100,
@@ -206,12 +227,11 @@ body.light .contact ul.social li a {
 }
 
 body.light .contact ul.social li a:hover {
-  background: var(--main-primary-color);
-  color: #fff;
+  background-color: var(--main-accent-color);
 }
 
 body.light .blog .post-content {
-  background-color: #f5f8fc;
+  background-color: var(--main-light-color);
 }
 body.light .quotebox .icon img {
   filter: invert(0);
@@ -226,7 +246,7 @@ body.light .blog .post-content .entry-header h3 {
 }
 body.light .blog .post-container:hover {
   h3 {
-    color: var(--main-primary-color);
+    color: var(--main-secondary-color);
   }
 }
 body.light .blog .page-link {
@@ -250,10 +270,10 @@ body.light hr.separator {
 body.light .header ul.icon-menu li.icon-box {
   background-color: #eee;
   &:hover {
-    background: var(--main-primary-color);
+    background: var(--main-secondary-color);
   }
   &.react-tabs__tab--selected {
-    background: var(--main-primary-color);
+    background: var(--main-secondary-color);
   }
 }
 
@@ -402,6 +422,9 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   background-color: transparent;
   outline: none !important;
   cursor: pointer !important;
+  border: 1px solid var(--main-primary-color);
+  height: auto;
+  min-height: 55px;
 }
 
 .button .button-text {
@@ -421,6 +444,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   right: 0;
   transform: translateX(100%);
   transition: 0.3s ease-out all;
+  background-color: var(--main-accent-color);
 }
 
 .button:hover .button-text {
@@ -429,21 +453,25 @@ body.light .header ul.icon-menu li.icon-box:hover i {
 
 .button:hover:before {
   transform: translateX(0);
+  background-color: var(--main-accent-color);
 }
 
 .button-icon {
-  position: absolute;
-  right: -1px;
-  top: -1px;
-  bottom: 0;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 19px;
-  color: #ffffff;
-  border-radius: 50%;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  width: 55px !important;
+  height: 55px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 19px !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  background-color: var(--main-accent-color) !important;
+  z-index: 2 !important;
 }
 
 /*** Page Title ***/
@@ -580,10 +608,8 @@ body.light .header ul.icon-menu li.icon-box:hover i {
 }
 
 .header ul.icon-menu li.icon-box.react-tabs__tab--selected,
-.header ul.icon-menu li.icon-box:hover,
-.header ul.icon-menu li.icon-box.react-tabs__tab--selected i,
-.header ul.icon-menu li.icon-box:hover i {
-  color: #fff;
+.header ul.icon-menu li.icon-box:hover {
+  background-color: var(--main-accent-color);
 }
 
 .header .icon-box h2 {
@@ -688,8 +714,12 @@ body.light .header ul.icon-menu li.icon-box:hover i {
 }
 
 .home .home-details h1 span {
-  color: #fff;
+  color: var(--dark-text-secondary);
   display: block;
+}
+
+body.light .home .home-details h1 span {
+  color: var(--main-primary-color);
 }
 
 .home .home-details h6 {
@@ -731,7 +761,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
 .about .box-stats {
   padding: 20px 30px 25px 40px;
   border-radius: 5px;
-  border: 1px solid #252525;
+  border: 1px solid var(--main-neutral-color);
 }
 
 .about .box-stats.with-margin {
@@ -768,7 +798,6 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   height: 1px;
   background: #777;
 }
-
 /* Resume */
 
 .about .resume-box ul {
@@ -803,7 +832,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   z-index: 1;
   border-radius: 50%;
   color: #fff;
-  background-color: #252525;
+  background-color: var(--main-accent-color);
 }
 
 .about .resume-box .time {
@@ -1276,7 +1305,7 @@ body.light .contact .custom-span-contact a {
 .blog .post-container {
   &:hover {
     h3 {
-      color: var(--main-primary-color);
+      color: var(--dark-text-secondary);
     }
   }
 }
@@ -1444,7 +1473,7 @@ body.light .contact .custom-span-contact a {
     width: 54px;
     height: 54px;
     border-radius: 5px;
-    background: #252525;
+    background: var(--main-accent-color);
   }
 
   #menuToggle input {
@@ -1919,7 +1948,13 @@ button:focus {
 .portfolio .slideshow a,
 .title-section h1 span,
 .blog-post .meta i {
-  color: var(--main-primary-color);
+  color: var(--dark-text-secondary);
+}
+body.light .portfolio .slideshow figcaption h3,
+body.light .portfolio .slideshow a,
+body.light .title-section h1 span,
+body.light .blog-post .meta i {
+  color: var(--main-secondary-color);
 }
 .box_inner.about {
   .pie,
@@ -1995,36 +2030,20 @@ button:focus {
     transition: 0.3s;
     &:hover,
     &.react-tabs__tab--selected {
-      color: var(--main-primary-color);
+      color: var(--dark-text-secondary);
     }
   }
 }
 
-.portfolio.professional .grid li figure div span {
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-  z-index: 5;
-  position: relative;
-  transform: translateY(5px);
+body.light .portfolio-tab-list {
+  li {
+    &:hover,
+    &.react-tabs__tab--selected {
+      color: var(--main-secondary-color);
+    }
+  }
 }
-.portfolio.professional .grid li figure:hover div span {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-.portfolio.professional .grid li figure div span {
-  margin: 0;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 18px;
-  position: absolute;
-  left: 0;
-  top: 48%;
-  transform: translateY(-50%);
-  text-align: center;
-  width: 100%;
-}
+
 .portfolio.professional {
   .grid figure {
     -webkit-transition: 0.3s;
@@ -2038,7 +2057,7 @@ button:focus {
     &::before {
       content: "";
       position: absolute;
-      background: var(--main-primary-color);
+      background: var(--main-accent-color);
       width: 100%;
       height: 100%;
       left: 0;
@@ -2050,7 +2069,7 @@ button:focus {
     }
     &:hover {
       &::before {
-        opacity: 1;
+        opacity: 0.9;
         visibility: visible;
       }
     }
@@ -2090,3 +2109,76 @@ button:focus {
     text-decoration: none;
   }
 }
+
+/* Floating Tech Icons Animation - Container Only */
+.floating-icons-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Simple floating icon style - non-interactive */
+.floating-icon {
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Dark mode specific styles for floating icons */
+body.dark .floating-icon {
+  color: #FFFFFF;
+  opacity: 0.2;
+}
+
+/* Fix for send message button alignment */
+.contact .contactform button .button-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Fix for Know Me button icon alignment */
+.home .button .button-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Fix for Download CV button in the About section */
+.about .button .button-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+

@@ -19,9 +19,10 @@ const menuItem = [
 
 const HomeDark = () => {
   document.querySelector("body").classList.remove("rtl");
+  document.querySelector("body").classList.add("dark");
 
   return (
-    <div className="yellow">
+    <div className="blue-teal">
       <SwitchDark />
       {/* End Switcher */}
       <Tabs>

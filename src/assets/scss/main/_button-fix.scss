@@ -1,0 +1,110 @@
+/* Button style fixes */
+
+/* General button styles */
+.button {
+  position: relative !important;
+  display: inline-block !important;
+  line-height: 1.4 !important;
+  border-radius: 35px !important;
+  text-align: center !important;
+  padding: 16px 70px 16px 35px !important;
+  font-size: 15px !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  height: auto !important;
+  min-height: 55px !important;
+}
+
+/* Fix for the button icon alignment */
+.button-icon {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  width: 55px !important;
+  height: 55px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 19px !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  background-color: var(--main-accent-color) !important;
+  z-index: 2 !important;
+}
+
+/* Fix for FA icons within buttons */
+.button .fa {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+  line-height: 55px !important;
+  font-size: 19px !important;
+  margin: 0 !important;
+}
+
+/* Fix for Know Me button icon in Hero component */
+.home-details .button .button-icon,
+.home .button .button-icon {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  height: 55px !important;
+  width: 55px !important;
+  border-radius: 50% !important;
+}
+
+/* Fix for Send Message button icon in Contact component */
+.contact .contactform button .button-icon {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  height: 55px !important;
+  width: 55px !important;
+  border-radius: 50% !important;
+}
+
+/* Fix for Download CV button icon in About component */
+.about .button .button-icon,
+.about a.button .button-icon {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  height: 55px !important;
+  width: 55px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Apply to all button icons to ensure consistency */
+[class*="fa-"] {
+  line-height: normal !important;
+  text-align: center !important;
+}
+
+/* Fix for floating icons container to ensure it doesn't interfere with button clicks */
+.floating-icons-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  z-index: -1 !important; /* Place behind all content */
+}
+
+/* Ensure floating icons don't interfere with interactions */
+.floating-icon {
+  pointer-events: none !important;
+  z-index: -1 !important;
+}

@@ -1,5 +1,5 @@
 /* =================================================================== */
-/* YELLOW var(--main-primary-color)
+/* BLUE-TEAL THEME (12263A, 06BCC1, C5D8D1, F4EDEA, F4D1AE)
 ====================================================================== */
 
 .home h1,
@@ -13,8 +13,22 @@ body.light #menu li.active a,
 .portfolio .slideshow a,
 .portfolio .grid figure:hover figcaption,
 .blog-post .meta i {
+  color: var(--dark-text-secondary);
+}
+
+body.light .home h1,
+body.light .about .box-stats h3,
+body.light .title-section h1 span,
+body.light #menu li.active a,
+body.light .blog .post-container:hover .post-content .entry-header h3 a,
+body.light .blog .post-content .entry-header h3 a:hover,
+body.light .contact .custom-span-contact i,
+body.light .portfolio .slideshow a,
+body.light .portfolio .grid figure:hover figcaption,
+body.light .blog-post .meta i {
   color: var(--main-primary-color);
 }
+
 .home .home-details h1:before,
 .about .resume-box .icon,
 .contact ul.social li a:hover,
@@ -32,16 +46,20 @@ body.light.blog .page-item.active .page-link,
 .home .color-block,
 .title-section hr,
 .portfolio .slideshow .carousel-indicators li.active,
-.button:before,
-.button-icon {
+.button:before {
   background-color: var(--main-primary-color);
 }
+
+.button-icon {
+  background-color: var(--main-accent-color);
+}
+
 @media screen and (max-width: 991px) {
   .header ul.icon-menu li.icon-box.react-tabs__tab--selected,
   .header ul.icon-menu li.icon-box:hover,
   body.light .header ul.icon-menu li.icon-box.react-tabs__tab--selected,
   body.light .header ul.icon-menu li.icon-box:hover {
-    background: var(--main-primary-color) !important;
+    background: var(--main-secondary-color) !important;
   }
 }
 .contact .contactform input[type="text"]:focus,
@@ -58,7 +76,7 @@ body.light.blog .page-link:hover,
   border: 1px solid var(--main-primary-color);
 }
 .blog .post-thumb {
-  border-bottom: 5px solid var(--main-primary-color);
+  border-bottom: 5px solid var(--main-accent-color);
 }
 .pie,
 .c100 .bar,
@@ -112,5 +130,7 @@ body.light.blog .page-link:hover,
 .c100.p98 .fill,
 .c100.p99 .fill,
 .c100.p100 .fill {
-  border: 0.08em solid var(--main-primary-color);
+  border: 0.08em solid var(--main-secondary-color);
 }
+
+

@@ -8,13 +8,11 @@ import Index from "../../components/about/index";
 const heroContent = {
   heroImage: heroImg,
   heroMobileImage: heroImgMobile,
-  heroTitleName: "steve milner",
-  heroDesignation: "web designer",
-  heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
-  crafting clean & user‑friendly experiences, I am passionate about
-  building excellent software that improves the lives of those
-  around me.`,
-  heroBtn: "WHOMI",
+  heroTitleName: "saksham dahake",
+  heroDesignation: "Full Stack Developer | Data Scientist",
+  heroDescriptions: `I write code that thinks — blending software with AI and data.
+Always curious, always building.`,
+  heroBtn: "Know ME",
 };
 
 const Hero = () => {
