@@ -2182,3 +2182,87 @@ body.dark .floating-icon {
   z-index: 2;
 }
 
+/* Certifications and Awards Styles */
+.certification-item,
+.award-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h5 {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+  }
+  
+  p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Dark mode adjustments */
+body.dark-mode {
+  .certification-item,
+  .award-item {
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+/* Logo styles for Education and Experience sections */
+.institute-logo,
+.company-logo {
+  margin-bottom: 15px;
+  
+  img {
+    max-height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+/* Dark mode adjustments */
+body.dark-mode {
+  .institute-logo,
+  .company-logo {
+    img {
+      filter: grayscale(100%) brightness(1.5);
+      
+      &:hover {
+        filter: grayscale(0%) brightness(1.5);
+      }
+    }
+  }
+}
+

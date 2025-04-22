@@ -4,6 +4,8 @@ import Education from "./Education";
 import Experience from "./Experience";
 import PersonalInfo from "./PersonalInfo";
 import Skills from "./Skills";
+import Certifications from "./Certifications";
+import Awards from "./Awards";
 import cv from "../../assets/img/cv.webp";
 import heroImgMobile from "../../assets/img/hero/img-mobile.jpg";
 
@@ -90,6 +92,36 @@ const index = () => {
           </div>
         </div>
         {/*  Experience & Education Ends */}
+        
+        <hr className="separator mt-1" />
+        
+        {/* Certifications Starts */}
+        <div className="row">
+          <div className="col-12">
+            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
+              Certifications
+            </h3>
+          </div>
+          <div className="col-12">
+            <Certifications />
+          </div>
+        </div>
+        {/* Certifications Ends */}
+        
+        <hr className="separator mt-1" />
+        
+        {/* Awards Starts */}
+        <div className="row">
+          <div className="col-12">
+            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
+              Awards & Achievements
+            </h3>
+          </div>
+          <div className="col-12">
+            <Awards />
+          </div>
+        </div>
+        {/* Awards Ends */}
       </div>
     </section>
   );
